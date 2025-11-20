@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timeror</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="timer-container">
+<h2>TIMEROR</h2>
+<div class="clock-display">
+<div id="currentTime">Current Time: --:--:--</div>
+</div>
+<div>
+<input type="number" id="hoursInput" placeholder="HRS" min="0" value="0">
+<input type="number" id="minutesInput" placeholder="MIN" min="0" max="59"
+value="0">
+<input type="number" id="secondsInput" placeholder="SEC" min="0" max="59"
+value="0"><br>
+<button onclick="setTimer()">SET</button>
+</div>
+<div class="time-display">
+<div id="elapsedTime">Time Elapsed: 0h 0m 0s</div>
+<div id="remainingTime">Time Remaining: 0h 0m 0s</div>
+</div>
+<div class="break-display">
+<div id="breakTime">Break Time: 0h 0m 0s</div>
+</div>
+<div class="controls">
+<button onclick="startTimer()" id="startBtn">PLAY</button>
+<button onclick="pauseTimer()" id="pauseBtn" disabled>PAUSE</button>
+<button onclick="resetTimer()" id="resetBtn" disabled>RESET</button>
+</div>
+<div class="progress-bar">
+<div id="progressFill" class="progress-fill"></div>
+</div>
+<div id="status" class="status">TIMER READY</div><div class="break-history">
+<h3>BREAK HISTORY</h3>
+<div id="breakHistoryList"></div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
